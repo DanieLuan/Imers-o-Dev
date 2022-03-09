@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Imersão Dev Alura - Aula 02</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">
+          Conversor de Temperaturas
+        </h1>
+        <p class="page-subtitle">
+          Coloque um valor de temperatura e 
+        </p>
+        <div class="input">
+          <label for="temperatura">Insira o valor da temperatura:</label>
+          <input type="number" id="temperaturaEntrada" size="2" />
+        </div>
+        
+        
+        <div class="buttons">
+          <p>Seleciione a unidade de medida:</p>
+          <button type="submit" onclick="celsius()">Celsius</button>
+          <button type="submit" onclick="fahrenheit()">Fahrenheit</button>  
+          <button type="submit" onclick="kelvin()">Kelvin</button>
+        </div>
+        
+        <h2 id="tempConvert1"></h2>
+        <h2 id="tempConvert2"></h2>
+      </div>
+      <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+</body>
+</html>
