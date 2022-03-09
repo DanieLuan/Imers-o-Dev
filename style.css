@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;}
+
+.header {
+    margin-top: 0px;
+    padding: 6vh 0px;
+    background: rgb(34,193,195);
+    background: linear-gradient(36deg, rgba(34,193,195,1) 0%, rgba(39,157,221,1) 32%, rgba(45,253,109,1) 100%);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    
+}
+
+.title {
+    margin-left: 9.2vw;
+    font-size: 60px;
+}
+
+.subtitle {
+    margin-left: 9.2vw;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.header a {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+}
+.header a:hover {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.project-in-list {
+    margin-top: 50px;
+    margin-right: 50vw;
+    margin-left: 10vw;
+}
+.project-in-list ul{
+    list-style-type: decimal-leading-zero;
+    margin-top: 5px;
+}
+
+.list-title {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 0px ;
+}
+
+.list-content {
+    margin-top: 8px;
+}
+.list-content a {
+    font-size: 20px;
+    text-decoration: underline;
+    color: #007aaa;
+}
+.list-content a:hover {
+    font-size: 20px;
+    text-decoration: underline;
+    color: #004966;
+}
+.list-content p {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.list-content strong {
+    font-size: 25px;
+}
+.list-content ul{
+    list-style-type: decimal;
+    margin-top: 5px;
+}
