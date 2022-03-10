@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>AluraFlix</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="container-logo">
+				<h1 class="page-title">Aluraflix</h1>
+				<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+			</div>
+			<a href="https://alura.com.br/" target="_blank" class="alura-logo">
+				<img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+			</a>
+		</div>
+		<div class="body-galery">
+			<h2 class="subtitle">Galeria de Filmes ou Séries</h2>
+			<div class="entrada-filmes">
+				<input type="text" id="entrada-texto" placeholder="URL de imagem de filme">
+				<button onclick="addFilm()" id="entrada-button">ADICIONAR</button>
+			</div>
+			
+			<div class="catalogo-filmes" id="catalogo-filmes"></div>
+			<script src="script.js"></script>
+		</div>
+			
+	</body>
+</html>
