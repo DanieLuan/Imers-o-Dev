@@ -3,40 +3,45 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto', sans-serif;}
+    font-family: 'Roboto', sans-serif;
+}
 
 .header {
     margin-top: 0px;
-    padding: 6vh 0px;
-    background: rgb(34,193,195);
+    padding: 6vh 9.2vw;
     background: linear-gradient(36deg, rgba(34,193,195,1) 0%, rgba(39,157,221,1) 32%, rgba(45,253,109,1) 100%);
     color: white;
-
     display: flex;
     flex-direction: column;
     align-items: baseline;
     
 }
+.redes-sociais {
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+}
+
+.redes-sociais a{
+    text-decoration: none;
+    color: white;
+}
+
+.redes-sociais a:hover{
+    color: #004966;
+}
 
 .title {
-    margin-left: 9.2vw;
+    
     font-size: 60px;
 }
 
 .subtitle {
-    margin-left: 9.2vw;
+    
     font-size: 22px;
     font-weight: 400;
-}
-
-.header a {
-    text-decoration: none;
-    font-style: italic;
-    color: rgb(255, 255, 255);
-}
-.header a:hover {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
 }
 
 .project-in-list {
@@ -78,4 +83,8 @@
 .list-content ul{
     list-style-type: decimal;
     margin-top: 5px;
+}
+.list-content li{
+    margin-top: 5px;
+    font-size: 18px;
 }
