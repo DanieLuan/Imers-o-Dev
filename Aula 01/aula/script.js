@@ -1,4 +1,4 @@
-function calcularMedia {
+function calcularMedia(){
 
     var num1 = document.getElementById("num1");
     var num2 = document.getElementById("num2");
@@ -19,7 +19,7 @@ function calcularMedia {
 
     var mediaElement = document.getElementById("resultado");
 
-    var mediaElementPrint " = " + media;
+    var mediaElementPrint = " = " + media;
     
     mediaElement.innerHTML = mediaElementPrint;
 

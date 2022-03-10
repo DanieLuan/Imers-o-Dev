@@ -24,7 +24,12 @@ function Chutar() {
             document.getElementById("tentativas").innerHTML = "Tentativas restando: " + numTentativas;
         }
         else {
-            resultado.innerHTML = "Você errou! Tente novamente!"
+            if(numeroChute > numeroSecreto){
+                resultado.innerHTML = "Você errou! Tente novamente! O número é MENOR que " + numeroChute
+            }
+            else{
+                resultado.innerHTML = "Você errou! Tente novamente! O número é MAIOR que " + numeroChute
+            }
     }
     }
 }
