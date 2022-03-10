@@ -21,6 +21,7 @@ function Chutar() {
         else if (numeroChute > 10 || numeroChute < 0 ) {
             resultado.innerHTML = "Digite um número entre 0 e 10!";
             numTentativas++;
+            document.getElementById("tentativas").innerHTML = "Tentativas restando: " + numTentativas;
         }
         else {
             resultado.innerHTML = "Você errou! Tente novamente!"
