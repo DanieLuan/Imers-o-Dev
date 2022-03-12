@@ -1,56 +1,61 @@
-function celsius() {
-    var temp = document.getElementById("temperaturaEntrada");
-    var celsiusTemp = temp.value;
-    var celsiusTempFloat = parseFloat(celsiusTemp);
-
-    var fahrenheit = ((9/5) * celsiusTempFloat) + 32;
-    fahrenheit = fahrenheit.toFixed(2);
-
-    var kelvin = celsiusTempFloat + 273;
-    kelvin = kelvin.toFixed(2);
-
-    var elementoTemp1 = document.getElementById("tempConvert1");
-    var elementoTemp2 = document.getElementById("tempConvert2");
-    var tempConvert1 = fahrenheit + " F°";
-    var tempConvert2 = kelvin + " K";
-    elementoTemp1.innerHTML = tempConvert1;
-    elementoTemp2.innerHTML = tempConvert2;
-}
-
-function fahrenheit() {
-    var temp = document.getElementById("temperaturaEntrada");
-    var fahrenheitTemp = temp.value;
-    var fahrenheitTempFloat = parseFloat(fahrenheitTemp);
-
-    var celsius = (5/9) * (fahrenheitTempFloat - 32);
-    var kelvin = celsius + 273;
-
-    celsius = celsius.toFixed(2);
-    kelvin = kelvin.toFixed(2);
-
-    var elementoTemp1 = document.getElementById("tempConvert1");
-    var elementoTemp2 = document.getElementById("tempConvert2");
-    var tempConvert1 = celsius + " C°";
-    var tempConvert2 = kelvin + " K";
-    elementoTemp1.innerHTML = tempConvert1;
-    elementoTemp2.innerHTML = tempConvert2;
-}
-
-function kelvin() {
-    var temp = document.getElementById("temperaturaEntrada");
-    var kelvinTemp = temp.value;
-    var kelvinTempFloat = parseFloat(kelvinTemp);
-
-    var celsius = kelvinTempFloat - 273;
-    var fahrenheit = ((9/5) * celsius) + 32;
-
-    fahrenheit = fahrenheit.toFixed(2);
-    celsius = celsius.toFixed(2);
+function converter() {
+    var temp = document.getElementById("temperaturaEntrada").value;
+    var tempToConvert = document.getElementById("tempToConvert").value;
+    var tempConvert = document.getElementById("tempConvert").value;
     
-    var elementoTemp1 = document.getElementById("tempConvert1");
-    var elementoTemp2 = document.getElementById("tempConvert2");
-    var tempConvert1 = celsius + " C°";
-    var tempConvert2 = fahrenheit + " F°";
-    elementoTemp1.innerHTML = tempConvert1;
-    elementoTemp2.innerHTML = tempConvert2;
+    resultElemnt = document.getElementById("result");
+
+    temp = parseFloat(temp);
+    tempToConvert = parseFloat(tempToConvert);
+    tempConvert = parseFloat(tempConvert);
+    
+    if(tempToConvert == 1){
+        if(tempConvert == 2){ //celsius to fahrenheit
+            var fahrenheit = ((9/5) * temp) + 32;
+            fahrenheit = fahrenheit.toFixed(2);
+
+            resultElemnt.innerHTML = fahrenheit + " °F";
+        }
+        else if(tempConvert == 3){
+            var kelvin = temp + 273;
+            kelvin = kelvin.toFixed(2);
+
+            resultElemnt.innerHTML = kelvin + " K";
+        }
+        else if(tempConvert == 1){
+            resultElemnt.innerHTML = temp + " °C";
+        }
+    }
+    else if(tempToConvert == 2){
+        var celsius = (5/9) * (temp - 32);
+        var kelvin = celsius + 273;
+
+        if(tempConvert == 1){ //fahrenheit to celsius
+            celsius = celsius.toFixed(2);
+            resultElemnt.innerHTML = celsius + " °C";
+        }
+        else if(tempConvert == 3){  //fahrenheit to kelvin
+            kelvin = kelvin.toFixed(2);
+            resultElemnt.innerHTML = kelvin + " K";
+        }
+        else if(tempConvert == 2){
+            resultElemnt.innerHTML = temp + " °F";
+        }
+    }
+    else if(tempToConvert == 3){
+        var celsius = temp - 273;
+
+        if(tempConvert == 1){ //kelvin to celsius
+            celsius = celsius.toFixed(2);
+            resultElemnt.innerHTML = celsius + " °C";
+        }
+        else if(tempConvert == 3){  //kelvin to kelvin
+            resultElemnt.innerHTML = temp + " K";
+        }
+        else if(tempConvert == 2){ //kelvin to fahrenheit
+            var fahrenheit = ((9/5) * celsius) + 32;
+            fahrenheit = fahrenheit.toFixed(2);
+            resultElemnt.innerHTML = fahrenheit + " °F";
+        }
+    }
 }

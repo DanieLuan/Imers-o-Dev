@@ -34,11 +34,22 @@ body {
   right: 10px;
 }
 
+h3 {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.selectTemp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 input {
   margin: 12px;
   padding: 6px;
   border-radius: 10px;
-  
 }
 
 label {
@@ -47,7 +58,7 @@ label {
 
 .buttons {
   font-family: "Roboto Mono", monospace;
-  margin-top: 20px;
+  margin-top: 5px;
   color: white;
   display: flex;
   align-content: center;
