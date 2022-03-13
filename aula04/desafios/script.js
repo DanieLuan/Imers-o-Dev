@@ -19,9 +19,7 @@ var nomeFilmes = [
 
 var listaElement = document.getElementById("catalogo-filmes");
 
-for(i = 0; i < listaFilmes.length; i++){
-    listaElement.innerHTML = listaElement.innerHTML + "<div class=" + "catalogo-filme-indiv" + " id=" + "catalogo-filme-indiv" + ">" + "<h3 class=" + "titulo-filme" + ">" + nomeFilmes[i] + "</h3>" + "<img src=" + listaFilmes[i] + " class=" + "catalogo-imagens" +">" + "</div>";
-}
+printList(nomeFilmes, listaFilmes);
 
 
 function addFilm() {
@@ -33,9 +31,7 @@ function addFilm() {
         listaFilmes.push(newMovie);
         nomeFilmes.push(newName);
 
-        for(i = 0; i < listaFilmes.length; i++){
-            listaElement.innerHTML = listaElement.innerHTML + "<div class=" + "catalogo-filme-indiv" + " id=" + "catalogo-filme-indiv" + ">" + "<h3 class=" + "titulo-filme" + ">" + nomeFilmes[i] + "</h3>" + "<img src=" + listaFilmes[i] + " class=" + "catalogo-imagens" +">" + "</div>";
-        }
+        printList(nomeFilmes, listaFilmes);
     }
     else {
         alert("Por favor, coloque o nome e o endereço de uma imagem válida!")
@@ -46,15 +42,29 @@ function addFilm() {
 }
 
 function removeFilm() {
-    let newName = document.getElementById("entrada-nome").value;
-    let indiceFilm = document.getElementById("entrada-indice").value;
-    console.log(newName);
-    console.log(indiceFilm);
+    let newName = document.getElementById("entrada-nome-remover").value;
     let pos = nomeFilmes.indexOf(newName);
 
-    listaFilmes = listaFilmes.splice(pos);
-    nomeFilmes = nomeFilmes.splice(pos);
+    console.log(newName);
+    console.log(pos);
 
+    if(newName === nomeFilmes[pos]){
+        listaFilmes.splice(pos,1);
+        nomeFilmes.splice(pos,1);
+    }
+    else{
+        alert("Erro! Filme não encontrado.")
+    }
+    
+    listaElement.innerHTML = "";
+
+    printList(nomeFilmes, listaFilmes);
+
+    document.getElementById("entrada-nome-remover").value = "";
+    
+}
+
+function printList(nomeFilmes, listaFilmes) {
     for(i = 0; i < listaFilmes.length; i++){
         listaElement.innerHTML = listaElement.innerHTML + "<div class=" + "catalogo-filme-indiv" + " id=" + "catalogo-filme-indiv" + ">" + "<h3 class=" + "titulo-filme" + ">" + nomeFilmes[i] + "</h3>" + "<img src=" + listaFilmes[i] + " class=" + "catalogo-imagens" +">" + "</div>";
     }
