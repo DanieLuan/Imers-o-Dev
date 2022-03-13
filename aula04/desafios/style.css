@@ -10,7 +10,7 @@ body {
     background-image: url("https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-04-aluraflix-e-filmes.png");
     background-color: #000000;
     background-size: cover;
-    background-position: center top;
+    background-position: top center;
     background-repeat: no-repeat;
   }
   
@@ -43,8 +43,8 @@ body {
   }
   
   .page-logo {
-    width: 100px;
-    margin: 0px auto;
+    width: 200px;
+    margin: 15px auto;
   }
   
   .alura-logo {
@@ -69,6 +69,46 @@ body {
     margin: 0px 10%;
     padding: 25px;
 }
+.inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.remover-filmes input{
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.08);
+  border-radius: 30px;
+}
+
+.remover-filmes button{
+    width: 105.39%;
+    padding: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.08);
+    border-radius: 30px;
+    background-color: #c50404;
+    color: white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.remover-filmes button:hover{
+  font-weight: 700;
+  background-color: #7e0000;
+}
+
+.remover-filmes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
 .entrada-filmes input {
     width: 100%;
     padding: 10px;
@@ -94,13 +134,12 @@ body {
     font-weight: 700;
     background-color: #7e0000;
 }
+
 .entrada-filmes {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    margin: 0px 40%;
-
 }
   
 .catalogo-imagens {
@@ -109,6 +148,7 @@ body {
     margin-bottom: 50px;
 
 }
+
 .catalogo-filmes {
     display: flex;
     row-gap: auto;
@@ -119,5 +159,21 @@ body {
     justify-content: space-evenly;
     align-self: flex-start;
     align-items: center;
+}
 
+h3 {
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.catalogo-filme-indiv {
+  border: #ffffff 1px solid;
+  border-radius: 40px;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ad000036;
+  margin-bottom: 20px;
+  
 }

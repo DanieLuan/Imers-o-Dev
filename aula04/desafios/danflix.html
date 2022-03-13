@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DanFlix</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="container-logo">
+				<img src="logo.png" class="page-logo" alt="">
+			</div>
+			<a href="https://alura.com.br/" target="_blank" class="alura-logo">
+				<img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+			</a>
+		</div>
+		
+		<div class="body-galery">
+
+			<h2 class="subtitle">Galeria de Filmes ou Séries</h2>
+
+			<div class="inputs">
+				<div class="entrada-filmes">
+					<h2>Adicionar Filme</h2>
+					<input type="text" id="entrada-nome" placeholder="Nome do Filme">
+					<input type="text" id="entrada-texto" placeholder="URL de imagem de filme">
+					<button onclick="addFilm()" id="entrada-button">ADICIONAR</button>
+				</div>
+				<div class="remover-filmes">
+					<h2>Remover Filme</h2>
+					<input type="text" id="entrada-nome" placeholder="Nome do Filme">
+					<input type="text" id="entrada-indice" placeholder="Índice do Filme">
+					<button onclick="removeFilm()" id="remove-button">REMOVER</button>
+				</div>
+			</div>
+			
+			<div class="catalogo-filmes" id="catalogo-filmes">
+			</div>
+			<script src="script.js"></script>
+		</div>
+	</body>
+</html>
