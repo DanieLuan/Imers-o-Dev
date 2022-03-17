@@ -66,6 +66,6 @@ function removeFilm() {
 
 function printList(nomeFilmes, listaFilmes) {
     for(i = 0; i < listaFilmes.length; i++){
-        listaElement.innerHTML = listaElement.innerHTML + "<div class=" + "catalogo-filme-indiv" + " id=" + "catalogo-filme-indiv" + ">" + "<h3 class=" + "titulo-filme" + ">" + nomeFilmes[i] + "</h3>" + "<img src=" + listaFilmes[i] + " class=" + "catalogo-imagens" +">" + "</div>";
+        listaElement.innerHTML = listaElement.innerHTML + "<div class='catalogo-filme-indiv' id=" + "catalogo-filme-indiv" + ">" + "<h3 class=" + "titulo-filme" + ">" + nomeFilmes[i] + "</h3>" + "<img src=" + listaFilmes[i] + " class=" + "catalogo-imagens" +">" + "</div>";
     }
 }
